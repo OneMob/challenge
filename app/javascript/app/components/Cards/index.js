@@ -2,9 +2,6 @@ import React from 'react'
 import Card from './Card'
 
 function Cards({images, removeImage}) {
-  console.log(images)
-  console.log('length', images.length)
-
   return (
     <div className="row">
       {images.map((image, index) =>
