@@ -35,7 +35,7 @@ function App() {
       <Header />
       <div className="container">
         <Upload />
-        <Alert show={alertVisible} variant={"success"} >
+        <Alert show={alertVisible} variant={"success"}>
           Image successfully added
         </Alert>
         {/* We could even move images prop into the Cards Component */}
