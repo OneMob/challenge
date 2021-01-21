@@ -1,7 +1,7 @@
 import React from 'react'
 import './alert.scss'
 
-const Alert = ({show, variant, dismissible, children}) => (
+const Alert = ({show, variant, children}) => (
   show ? (
     <div 
       className={`alert alert-${variant}`} 
