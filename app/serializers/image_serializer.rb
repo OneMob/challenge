@@ -1,12 +1,12 @@
 class ImageSerializer < ActiveModel::Serializer
   include Rails.application.routes.url_helpers
 
-  BLOB_ATTRS = [:content_type, :byte_size, :filename]
-  attributes :id, :url, *BLOB_ATTRS
+  BLOB_ATTRIBUTES = [:content_type, :byte_size, :filename]
+  attributes :id, :url, *BLOB_ATTRIBUTES
 
   def initialize(*params)
     super(*params)
-    define_method_attributes BLOB_ATTRS
+    define_methods_for_blob_attributes BLOB_ATTRIBUTES
   end
 
   def url
@@ -15,7 +15,7 @@ class ImageSerializer < ActiveModel::Serializer
 
   private
 
-  def define_method_attributes attributes
+  def define_methods_for_blob_attributes attributes
     attributes.each do |attr|
       class_eval <<-EOS
         def #{attr}
