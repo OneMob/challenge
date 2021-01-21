@@ -16,7 +16,7 @@ class Api::V1::ImagesController < ApiController
   private
   def load_images
     @images ||= Image.all
-    render json: @images
+    json_response @images
   end
 
   def load_image
@@ -25,7 +25,7 @@ class Api::V1::ImagesController < ApiController
 
   def save_image
     if @image.save
-      render json: @image
+      json_response @image
     end
   end
 
