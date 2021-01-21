@@ -15,16 +15,7 @@ function App() {
   // In case of any errors from the server we can use the error viariable to
   // show visual cues
   let {images, isImageAdded, error} = useSelector( state => state.imagesState );
-  
   const [alertVisible, setAlertVisible] = useState(false)
-
-  const uploadImage = (file) => {
-    dispatch(doImagePost(file))
-  }
-
-  const removeImage = (file) => {
-    dispatch(doImageDelete(file))
-  }
 
   useEffect(() => {
     dispatch(doImagesFetch())
@@ -43,11 +34,12 @@ function App() {
     <div className="app">
       <Header />
       <div className="container">
-        <Upload uploadFile={uploadImage} />
+        <Upload />
         <Alert show={alertVisible} variant={"success"} dismissible>
           Image successfully added
         </Alert>
-        <Cards images={ images } removeImage={removeImage} />
+        {/* We could even move images prop into the Cards Component */}
+        <Cards images={ images } /> 
       </div>
     </div>
   )
