@@ -1,11 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from "react";
+import ReactDOM from "react-dom";
+import { ToastProvider } from "react-toast-notifications";
 
-import Hello from './Hello';
+import Home from "./Home";
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(
-    <Hello />,
-    document.body.appendChild(document.createElement('div'))
-  )
-})
+    <ToastProvider>
+      <Home />
+    </ToastProvider>,
+    document.body.appendChild(document.createElement("div"))
+  );
+});

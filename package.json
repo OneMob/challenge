@@ -10,7 +10,11 @@
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "rebass": "^4.0.7",
+    "@rebass/forms": "^4.0.6",
+    "styled-components": "^5.2.1",
+    "react-toast-notifications": "^2.4.0"
   },
   "version": "0.1.0",
   "devDependencies": {
