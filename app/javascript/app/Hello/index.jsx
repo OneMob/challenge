@@ -1,7 +1,7 @@
 import './index.scss';
 import React, { useEffect, useState } from 'react';
 import { getImages, postImage } from '../container/actions/index';
-import { NotificationContainer, NotificationManager } from 'react-notifications';
+import { NotificationContainer } from 'react-notifications';
 import Images from './image';
 
 export default function Hello() {
