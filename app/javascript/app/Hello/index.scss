@@ -1,0 +1,17 @@
+.image-form {
+  display: flex;
+  flex-direction:column ;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.image-form form {
+  width: 380px;
+  border: 1px solid #ececef;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 1px 2px 2px 0px #f3f2f2;
+  .input-file {
+    margin-bottom: 15px;
+  }
+}

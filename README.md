@@ -35,3 +35,6 @@ And Deletes the image from the DB
 **Evaluation criteria:**
 - Clean, readable code
 - Following common best practices
+
+**To Install the NPM Packages:**
+- Run `npm install` at project root
