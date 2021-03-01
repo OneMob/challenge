@@ -1,11 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-
-import Hello from './Hello';
+import View from './View';
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Hello />,
+    <View />,
     document.body.appendChild(document.createElement('div'))
   )
 })
